@@ -78,7 +78,16 @@
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-
+    let countedNames = data.reduce(function (allNames, name) {
+      if (name in allNames) {
+        allNames[name]++;
+      } else {
+        allNames[name] = 1
+      }
+      return allNames
+    }, {})
+    console.log('Instances of each element in data array:')
+    console.log(countedNames)
   </script>
 </body>
 </html>
