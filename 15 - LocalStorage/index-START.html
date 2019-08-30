@@ -30,6 +30,15 @@
   const itemsList = document.querySelector('.plates');
   const items = [];
 
+  function addItem(e){
+    e.preventDefault();
+    let newItem = "hello world"
+    items.push(newItem);
+    console.log(items);
+  }
+  
+  addItems.addEventListener('click', addItem)
+
 </script>
 
 
